@@ -1,3 +1,22 @@
+
+Note:- 
+
+1)GitHub consist of War file(AdCampaign.war) deploy directly to the Tomcat server.
+2)Start the Tomcat server.
+3)Open Google Chrome Advance REST Client Webservice, or SOAP UI.
+4) For GET.
+   http://localhost:8080/restws/services/adCampaignService/campaigns/123
+   (This is the defaul first manual entry of Campaign)
+   
+5) You can add your campaing entry on this POST url 
+   http://localhost:8080/restws/services/adCampaignService/campaigns
+        
+6) Repeat Step 4 to test your new entry by passing the id that is generated in post.
+
+Below is the step to Build and Deploy and Test the application from source code. From Source code  
+
+
+
 Building and running the Project using Maven
 ---------------------------------------
 
