@@ -1,0 +1,52 @@
+Building and running the Project using Maven
+---------------------------------------
+
+1) Right CLick on the project in eclipse .Go to the Run As menu item and do 
+
+  Maven clean 
+  
+2) And then repeat the step 1 and do a
+  
+  Maven install
+  
+
+To Run the application:
+-------------------------
+
+Right click on the project, go to the Run As Menu Item and select run on the server option.
+
+
+Accessing the REST AdCompaign Service
+=================================
+
+
+A RESTful patient services WADL can be accessed at this URL 
+
+http://localhost:8080/restws/services/adCampaignService?_wadl
+ 
+
+A HTTP GET request to URL http://localhost:8080/restws/services/adCampaignService/campaigns/123
+returns a Campaign instance whose id is 123. The XML document returned:
+
+<Compaign>
+<ad_content>My Add</ad_content>
+<duration>15 Secs</duration>
+<partner_id>123</partner_id>
+</Compaign>
+
+A HTTP POST request to URL http://localhost:8080/restws/services/adCampaignService/campaigns
+with the data:
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<Campaign>
+<ad_content>My 3 Add</ad_content>
+<duration>14 Secs</duration>
+</Campaign>
+
+Json format
+{
+ "duration": "String_representing_campaign_duration_in_seconds_from_now",
+ "ad_content": "string_of_content_to_display_as_ad"
+}
+
+
